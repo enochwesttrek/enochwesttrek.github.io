@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Viga&display=swap");
+
+* {
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  .content {
+    width: 80vw;
+    color: #828282;
+    h1 {
+      color: #6ec1e4;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-blackout {
+    background-color: rgb(57, 56, 56);
+    background-image: url(../images/blackout-section-background.png);
+    width: 100vw;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family:
+      "Viga", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+      Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px;
+    grid-gap: 40px;
+    .grid-item {
+      width: 35vw;
+      img {
+        width: 35vw;
+      }
+    }
+  }
+  .tri-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    background-color: white;
+    color: black;
+    margin: 10px;
+    height: 250px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+      height: 30%;
+      width: fit-content;
+      color: #828282;
+    }
+    .button {
+      border-radius: 20px;
+      /* padding: 5px 10px 5px 40px; */
+      position: relative;
+      width: 80%;
+      display: flex;
+      a {
+        text-decoration: none;
+        color: black;
+        margin-left: 35px;
+        padding: 2.5px 0px;
+        z-index: 99;
+        width: 999px;
+        display: block;
+        transition: 0.3s;
+      }
+      .button-animation {
+        background-color: #9aa55d;
+        border-radius: 20px;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        color: transparent;
+        z-index: 0;
+      }
+      .button-animation:hover {
+        animation: slideInFromLeft 0.3s ease forwards;
+        z-index: 0;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  @media (width < 1000px) {
+    .grid {
+      grid-template-columns: 1fr;
+      margin: 10px;
+      .grid-item {
+        width: 90vw;
+        img {
+          width: 90vw;
+        }
+      }
+    }
+    .tri-grid {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      width: 80vw;
+      .button {
+        width: 50%;
+      }
+    }
+    iframe {
+      height: 60vw;
+    }
+    .slider-container {
+      width: 80vw;
+    }
+    .slider-item {
+      width: 80vw;
+      height: 550px;
+    }
+  }
+}
+.bold {
+  font-weight: 700;
+}
+@keyframes slideInFromLeft {
+  from {
+    width: 30px;
+  }
+  to {
+    width: 175px;
+  }
+}
+.slider-container {
+  overflow: hidden;
+  width: 1000px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  height: 260px;
+  width: 1000px;
+  padding: 50px;
+  display: block;
+  cursor: pointer;
+  border-bottom: solid #828282;
+  border-radius: 10px;
+  /* animation: slider-animation 5s linear infinite; */
+}
+.spacer40px {
+  height: 40px;
+}
+iframe {
+  margin: 70px;
+  width: 80vw;
+  height: 40vw;
+}
