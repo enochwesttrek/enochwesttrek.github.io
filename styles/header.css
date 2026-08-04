@@ -40,6 +40,9 @@ header {
   .phone-menu-icon {
     display: none;
   }
+  .phone-menu-exit-icon {
+    display: none;
+  }
 }
 
 @media (width < 1000px) {
