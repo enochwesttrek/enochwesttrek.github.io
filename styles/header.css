@@ -6,14 +6,14 @@ header {
   background-size: cover;
   background-position: center;
   box-shadow: inset 0px 79px 113px -22px rgba(0, 0, 0, 0.75);
-  filter: saturate(1.5);
   display: flex;
   align-items: start;
   justify-content: center;
   .nav-links {
     display: flex;
     align-items: center;
-    a {
+    a,
+    .drop-menu {
       color: white;
       text-decoration: none;
       margin: 20px;
@@ -33,9 +33,37 @@ header {
     display: flex;
     justify-content: end;
     width: 35vw;
+    gap: 20px;
   }
   .halve-container-right-side {
     justify-content: start;
+    gap: 20px;
+  }
+  .drop-menu {
+    cursor: pointer;
+    transition: 0.25s;
+    position: relative;
+    .dropped-menu {
+      display: none;
+      background-color: white;
+      position: absolute;
+      flex-direction: column;
+      width: 210px;
+      left: -27.5px;
+      a {
+        color: black;
+        text-shadow: none;
+        &:hover {
+          color: #9aa55d;
+        }
+      }
+    }
+    &:hover {
+      color: #9aa55d;
+      .dropped-menu {
+        display: flex;
+      }
+    }
   }
   .phone-menu-icon {
     display: none;
@@ -45,7 +73,7 @@ header {
   }
 }
 
-@media (width < 1000px) {
+@media (max-width: 1000px) {
   header {
     justify-content: end;
     height: 350px;
@@ -55,15 +83,17 @@ header {
     .nav-links {
       display: none;
       flex-direction: column;
-      position: absolute;
+      position: fixed;
       top: 0px;
       left: 0;
       width: 80%;
       height: 100vh;
       transform: width 1s ease;
+      overflow-y: scroll;
       background-color: #0a0a0a;
       padding: 1rem 0;
-      a {
+      a,
+      .drop-menu {
         padding: 0.5rem 1rem;
         font-size: 12px;
         img {
@@ -80,7 +110,6 @@ header {
       align-items: start;
       justify-content: start;
       padding: 40px;
-      overflow: hidden;
       font-size: larger;
       a {
         margin: 15px 0px;
@@ -90,6 +119,18 @@ header {
         padding: 0px;
         img {
           display: none;
+        }
+      }
+
+      .drop-menu {
+        margin: 15px 0px;
+        position: static;
+        .dropped-menu {
+          position: static;
+          background-color: #000000;
+          a {
+            color: white;
+          }
         }
       }
     }

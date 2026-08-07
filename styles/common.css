@@ -9,6 +9,12 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: sans-serif;
+  a {
+    transition: 0.25s;
+    &:hover {
+      color: #9aa55d;
+    }
+  }
 }
 .content-container {
   display: flex;
@@ -82,7 +88,7 @@ body {
         margin-left: 35px;
         padding: 2.5px 0px;
         z-index: 99;
-        width: 999px;
+        width: 175px;
         display: block;
         transition: 0.3s;
       }
@@ -133,6 +139,7 @@ body {
     .slider-item {
       width: 80vw;
       height: 550px;
+      padding: 10px;
     }
   }
 }
