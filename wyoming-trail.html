@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/trail-slider.css" />
+    <script
+      src="https://kit.fontawesome.com/110868636c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="components/site-nav.js"></script>
+    <script src="trail-slider.js" defer></script>
+    <title>Enoch West Trek</title>
+  </head>
+  <body>
+    <header style="background-image: url(images/registation-header-image.png)">
+      <site-nav></site-nav>
+      <h1>Trekking at the Wyoming Mormon Trail Sites</h1>
+    </header>
+    <div class="content-container">
+      <div class="content">
+        <div class="spacer40px"></div>
+        <div class="right-side-content">
+          <section
+            class="trail-slider"
+            aria-label="Wyoming trail photos"
+            aria-roledescription="carousel"
+            tabindex="0"
+          >
+            <div class="trail-slides">
+              <div
+                class="trail-slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="1 of 3"
+              >
+                <img
+                  src="images/pioneer-dramatic.png"
+                  alt="Pioneer handcart crossing an open plain at sunset"
+                />
+              </div>
+              <div
+                class="trail-slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="2 of 3"
+                hidden
+              >
+                <img
+                  src="images/mainheader.png"
+                  alt="Trek participants pull a handcart through a muddy trail"
+                />
+              </div>
+              <div
+                class="trail-slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="3 of 3"
+                hidden
+              >
+                <img
+                  src="images/registation-header-image.png"
+                  alt="Trek participants gather together outdoors"
+                />
+              </div>
+            </div>
+            <button
+              class="trail-arrow trail-prev"
+              type="button"
+              aria-label="Previous image"
+              data-prev
+            >
+              &lsaquo;
+            </button>
+            <button
+              class="trail-arrow trail-next"
+              type="button"
+              aria-label="Next image"
+              data-next
+            >
+              &rsaquo;
+            </button>
+            <div class="trail-dots" aria-label="Choose an image">
+              <button
+                class="trail-dot"
+                type="button"
+                aria-label="Show image 1"
+                aria-current="true"
+              ></button>
+              <button
+                class="trail-dot"
+                type="button"
+                aria-label="Show image 2"
+              ></button>
+              <button
+                class="trail-dot"
+                type="button"
+                aria-label="Show image 3"
+              ></button>
+            </div>
+          </section>
+          <div class="spacer40px"></div>
+        </div>
+      </div>
+
+      <div class="content-blackout">
+        <p>Copyright Â© 2026 Enoch West Trek. All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

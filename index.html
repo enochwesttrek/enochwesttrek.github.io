@@ -5,58 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/common.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <script
       src="https://kit.fontawesome.com/110868636c.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="components/site-nav.js"></script>
     <title>Enoch West Trek</title>
   </head>
   <body>
     <header style="background-image: url(images/mainheader.png)">
-      <div class="nav-links">
-        <div class="phone-menu-item">
-          <i
-            class="phone-menu-exit-icon fa-regular fa-rectangle-xmark"
-            style="color: #ffffff"
-          ></i>
-        </div>
-        <div class="halve-container">
-          <a href="">Home</a>
-          <a href="">Photo Gallery</a>
-          <a href="">Video Gallery</a>
-        </div>
-
-        <a href=""><img src="images/logo.png" alt="logo" /></a>
-
-        <div class="halve-container halve-container-right-side">
-          <div class="drop-menu">
-            <p>General Information</p>
-            <div class="dropped-menu">
-              <a href="">Registration</a>
-              <a href="">Dates/Itinerary</a>
-              <a href="">FAQ</a>
-              <a href="">Packing List</a>
-              <a href="">Trek Clothing</a>
-              <a href="">Physical Prep</a>
-              <a href="">Spiritual Prep</a>
-            </div>
-          </div>
-          <div class="drop-menu">
-            <p>Leaders Information</p>
-            <div class="dropped-menu">
-              <a href="">Ward Ma And Pa's</a>
-              <a href="">Driving Direction</a>
-              <a href="">Family Activities</a>
-              <a href="">Safety Guidelines</a>
-              <a href="">Trek buckets</a>
-              <a href="">Family Flags</a>
-            </div>
-          </div>
-          <a href=""><p>Contact Us</p></a>
-        </div>
-      </div>
-      <div class="phone-menu-icon"><i class="fa-solid fa-bars"></i></div>
-      <script src="phone-menu.js"></script>
+      <site-nav></site-nav>
     </header>
 
     <div class="content-container">
@@ -65,19 +24,21 @@
           <div class="grid-item">
             <h1>Welcome</h1>
             <p>
-              On June 26th, 2024 we’ll set out on a spiritual and physical
+              In June of 2027 we’ll set out on a spiritual and physical
               adventure on the Mormon trail in Wyoming. We’ll experience a
               little bit what the pioneers had to go through to reach the Salt
               Lake Valley. We’ll trek on hallowed ground pulling handcarts to
               Martin’s Cove, Sixth Crossing, and traveling through the
-              Sweetwater River. We will climb on Independence Rock and visit
-              Rock Creek Hollow, just to name a few of the sites we’ll visit.
-              Please review the content on this website and start preparing now
-              spiritually and physically.
+              Sweetwater River. We are truly excited and feel blessed to be able
+              to participate as a stake in such a wonderful and spiritual
+              activity. Please review the content below and start preparing now
+              spiritually and physically. We would also invite you to visit the
+              temple as often as possible to connect with your ancestorial
+              heritage.
             </p>
-            <p class="bold">
+            <!-- <p class="bold">
               Though hard to you this journey may appear, All is well!
-            </p>
+            </p> -->
           </div>
           <div class="grid-item">
             <img src="images/pioneer-dramatic.png" alt="pioneer image" />
@@ -89,13 +50,15 @@
         <div class="tri-grid">
           <div class="tri-grid-item">
             <div class="card">
-              <h3>Registration</h3>
+              <h3>Participation Form</h3>
               <ul>
-                <li>Registration Forms</li>
+                <li>General Information</li>
                 <li>Medical Forms</li>
               </ul>
               <div class="button">
-                <div class="button-animation"><a href="">LEARN MORE</a></div>
+                <div class="button-animation">
+                  <a href="participation-form.html">LEARN MORE</a>
+                </div>
               </div>
             </div>
           </div>
@@ -261,7 +224,7 @@
       </div>
       <script src="slider.js"></script>
       <div class="content-blackout">
-        <p>Coppyright © 2026 Enoch West Trek. All Rights Reserved.</p>
+        <p>Copyright © 2026 Enoch West Trek. All Rights Reserved.</p>
       </div>
     </div>
   </body>

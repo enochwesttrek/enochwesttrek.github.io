@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Viga&display=swap");
 
 header {
+  color: white;
+  font-family:
+    "Viga", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   box-shadow: inset 0px 79px 113px -22px rgba(0, 0, 0, 0.75);
   display: flex;
-  align-items: start;
-  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
   .nav-links {
     display: flex;
     align-items: center;
@@ -24,9 +29,14 @@ header {
         "Viga", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
         Helvetica, Arial, "Lucida Grande", sans-serif;
       img {
-        width: 150px;
+        /* width: 150px; */
+        /* filter: drop-shadow(4px 2px 2px #111111); */
+        width: 200px;
         filter: drop-shadow(4px 2px 2px #111111);
       }
+    }
+    a:has(img) {
+      margin-bottom: 0px;
     }
   }
   .halve-container {
@@ -34,6 +44,7 @@ header {
     justify-content: end;
     width: 35vw;
     gap: 20px;
+    border-bottom: solid;
   }
   .halve-container-right-side {
     justify-content: start;
@@ -71,11 +82,19 @@ header {
   .phone-menu-exit-icon {
     display: none;
   }
+  h1 {
+    font-size: 80px;
+    text-shadow: 2px 2px 2px #111111;
+    margin: 0px;
+  }
 }
 
 @media (max-width: 1000px) {
   header {
+    position: relative;
+    flex-direction: row;
     justify-content: end;
+    align-items: start;
     height: 350px;
     background-color: black;
     background-position: bottom;
@@ -151,6 +170,15 @@ header {
       color: white;
       margin: 0px 15px;
     }
+    h1 {
+      position: absolute;
+      align-self: end;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 60px;
+      font-size: 40px;
+    }
   }
 
   header::before {
@@ -158,12 +186,19 @@ header {
     display: block;
     position: absolute;
     background-image: url(../images/logo.png);
+    filter: invert();
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     width: 100vw;
-    height: 100px;
+    height: 200px;
     margin-top: 20px;
+    z-index: 1;
+  }
+
+  site-nav {
+    position: relative;
+    z-index: 2;
   }
 }
 @keyframes slideIn {
