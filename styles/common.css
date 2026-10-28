@@ -21,6 +21,11 @@ body {
     }
   }
 }
+
+site-nav {
+  height: 243px;
+}
+
 .large-button {
   background-color: #9aa55d;
   padding: 20px;
