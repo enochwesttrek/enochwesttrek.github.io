@@ -42,7 +42,7 @@
             <a href="itinerary.html">Import Dates</a>
             <a href="packing.html">Packing List</a>
           </div>
-          <a class="logo-link" href="index.html"><img class="logo" src="images/logo.png" alt="Enoch West Trek" /></a>
+          <a class="logo-link" href="index.html"><img class="logo" src="images/logo.avif" alt="Enoch West Trek" /></a>
           <div class="halve-container halve-container-right-side">
             <div class="drop-menu">
               <span>General Information</span>

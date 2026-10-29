@@ -13,9 +13,18 @@
     <script type="module" src="components/site-nav.js"></script>
     <script src="trail-slider.js" defer></script>
     <title>Enoch West Trek</title>
+      <link rel="icon" type="image/avif" href="images/logo.avif" />
   </head>
   <body>
-    <header>
+    <header class="page-header">
+      <picture class="page-header-image" aria-hidden="true">
+        <img
+          src="images/registration-header-desktop.avif"
+          srcset="images/registration-header-mobile.avif 768w, images/registration-header-tablet.avif 1536w, images/registration-header-desktop.avif 1920w, images/registration-header.avif 2500w"
+          sizes="(max-width: 525px) 100vw, (max-width: 1000px) 525px, 100vw"
+          alt=""
+        />
+      </picture>
       <site-nav></site-nav>
       <h1>Trekking at the Wyoming Mormon Trail Sites</h1>
     </header>
@@ -36,7 +45,7 @@
                 aria-label="1 of 3"
               >
                 <img
-                  src="images/pioneer-dramatic.png"
+                  src="images/pioneer-dramatic.avif"
                   alt="Pioneer handcart crossing an open plain at sunset"
                 />
               </div>
@@ -47,7 +56,7 @@
                 hidden
               >
                 <img
-                  src="images/mainheader.png"
+                  src="images/mainheader-desktop.avif"
                   alt="Trek participants pull a handcart through a muddy trail"
                 />
               </div>
@@ -58,7 +67,7 @@
                 hidden
               >
                 <img
-                  src="images/registation-header-image.png"
+                  src="images/registration-header.avif"
                   alt="Trek participants gather together outdoors"
                 />
               </div>

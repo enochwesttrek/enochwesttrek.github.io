@@ -11,9 +11,18 @@
     ></script>
     <script type="module" src="components/site-nav.js"></script>
     <title>Enoch West Trek</title>
+      <link rel="icon" type="image/avif" href="images/logo.avif" />
   </head>
   <body>
-    <header>
+    <header class="page-header">
+      <picture class="page-header-image" aria-hidden="true">
+        <img
+          src="images/registration-header-desktop.avif"
+          srcset="images/registration-header-mobile.avif 768w, images/registration-header-tablet.avif 1536w, images/registration-header-desktop.avif 1920w, images/registration-header.avif 2500w"
+          sizes="(max-width: 525px) 100vw, (max-width: 1000px) 525px, 100vw"
+          alt=""
+        />
+      </picture>
       <site-nav></site-nav>
       <h1>Physical &amp; Spiritual Preparation</h1>
     </header>

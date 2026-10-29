@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/common.css" />
-    <link rel="icon" type="image/png" href="images/logo.png" />
     <script
       src="https://kit.fontawesome.com/110868636c.js"
       crossorigin="anonymous"
     ></script>
     <script type="module" src="components/site-nav.js"></script>
     <title>Enoch West Trek</title>
+      <link rel="icon" type="image/avif" href="images/logo.avif" />
   </head>
   <body>
-    <header style="background-image: url(images/mainheader.png)">
+    <header class="page-header">
+      <picture class="page-header-image" aria-hidden="true">
+        <img
+          src="images/mainheader-desktop.avif"
+          srcset="
+            images/mainheader-mobile.avif   768w,
+            images/mainheader-tablet.avif  1536w,
+            images/mainheader-desktop.avif 2560w,
+            images/mainheader.avif         5184w
+          "
+          sizes="(max-width: 525px) 100vw, (max-width: 1000px) 525px, 100vw"
+          alt=""
+        />
+      </picture>
       <site-nav></site-nav>
+      <h1>
+        Enoch West Stake Pioneer Trek <br />
+        June 9-12, 2027
+      </h1>
     </header>
 
     <div class="content-container">
@@ -41,7 +58,7 @@
             </p> -->
           </div>
           <div class="grid-item">
-            <img src="images/pioneer-dramatic.png" alt="pioneer image" />
+            <img src="images/pioneer-dramatic.avif" alt="pioneer image" />
           </div>
         </div>
       </div>
