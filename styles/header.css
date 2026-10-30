@@ -36,6 +36,19 @@ header {
   display: block;
 }
 
+.page-header-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 28%),
+    rgb(0 0 0 / 12%) 55%,
+    rgb(0 0 0 / 24%)
+  );
+  pointer-events: none;
+}
+
 .page-header-image img {
   display: block;
   width: 100%;
