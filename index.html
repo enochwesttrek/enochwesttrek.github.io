@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <script
       src="https://kit.fontawesome.com/110868636c.js"
       crossorigin="anonymous"
     ></script>
     <script type="module" src="components/site-nav.js"></script>
     <title>Enoch West Trek</title>
-      <link rel="icon" type="image/avif" href="images/logo.avif" />
+    <link rel="icon" type="image/avif" href="images/logo.avif" />
   </head>
   <body>
     <header class="page-header">
@@ -39,7 +45,7 @@
       <div class="content">
         <div class="grid">
           <div class="grid-item">
-            <h1>Welcome</h1>
+            <h2>Welcome</h2>
             <p>
               In June of 2027 we’ll set out on a spiritual and physical
               adventure on the Mormon trail in Wyoming. We’ll experience a
@@ -53,9 +59,6 @@
               temple as often as possible to connect with your ancestorial
               heritage.
             </p>
-            <!-- <p class="bold">
-              Though hard to you this journey may appear, All is well!
-            </p> -->
           </div>
           <div class="grid-item">
             <img src="images/pioneer-dramatic.avif" alt="pioneer image" />
@@ -69,8 +72,8 @@
             <div class="card">
               <h3>Participation Form</h3>
               <ul>
-                <li>General Information</li>
-                <li>Medical Forms</li>
+                <li>For youth and adults</li>
+                <li>Help us plan Trek</li>
               </ul>
               <div class="button">
                 <div class="button-animation">
@@ -82,13 +85,15 @@
 
           <div class="tri-grid-item">
             <div class="card">
-              <h3>Photo Gallery</h3>
+              <h3>Prepare for Trek</h3>
               <ul>
-                <li>Check out Trek Photos</li>
-                <li>Upload your Photos</li>
+                <li>Build fitness and break in shoes</li>
+                <li>Grow spiritually</li>
               </ul>
               <div class="button">
-                <div class="button-animation"><a href="">LEARN MORE</a></div>
+                <div class="button-animation">
+                  <a href="preparation.html">LEARN MORE</a>
+                </div>
               </div>
             </div>
           </div>
@@ -97,11 +102,13 @@
             <div class="card">
               <h3>Contact Us</h3>
               <ul>
-                <li>Email Trek Leaders</li>
-                <li>Ward Ma and Pa's</li>
+                <li>Questions about Trek?</li>
+                <li>Contact our Trek leaders</li>
               </ul>
               <div class="button">
-                <div class="button-animation"><a href="">LEARN MORE</a></div>
+                <div class="button-animation">
+                  <a href="contacts.html">LEARN MORE</a>
+                </div>
               </div>
             </div>
           </div>
@@ -109,38 +116,85 @@
       </div>
       <div class="content">
         <h1>Explore Trek Sites</h1>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d815.4604673049203!2d-113.05584575135424!3d37.742455379531656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1785526770847!5m2!1sen!2sus"
-          width="100%"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
+        <div
+          id="trek-sites-map"
+          role="application"
+          aria-label="Satellite map showing Martin’s Cove, Sixth Crossing, the Sweetwater River, Independence Rock, and Rock Creek Hollow"
+          style="height: 450px; width: 100%"
+        ></div>
         <div class="spacer40px"></div>
       </div>
       <div class="content-blackout">
         <div class="grid">
           <div class="grid-item">
-            <h1>Why Trek?</h1>
+            <h2>Martins Cove Trek</h2>
           </div>
           <div class="grid-item">
             <p>
-              Going on Trek gives us the chance to experience to a small degree
-              the faith and determination of the early Pioneers who crossed the
-              plains almost 200 years ago.
+              Every year, Latter-day Saints throughout the world put on bonnets
+              or wide-brimmed hats, tennis shoes, sunglasses, and work gloves.
+              They leave their homes for a few days so they can pull loaded
+              wooden carts up and down hills and maybe even through streams.
             </p>
+
             <p>
-              Together as we honor the memories of those Saints who cross the
-              plains we will: strengthen testimonies, build unity, learn gospel
-              principles, and gather Israel.
+              Bewildered onlookers might see this combination of past and
+              present and ask a question: Why?
+            </p>
+
+            <p>
+              Actually, trekkers would do well to ask this same question. Why?
+              Why are they going on a trek? Even more important, why did the
+              early pioneers do what they did?
+            </p>
+
+            <p>
+              Why were early Latter-day Saints willing to walk more than a
+              thousand miles, with either handcarts or oxcarts? When they faced
+              trials, why did they keep going? Why did they help each other
+              along the way? When the Willie and Martin handcart companies were
+              stranded in severe snowstorms, why did strangers in the Salt Lake
+              Valley leap to action to save them?
+            </p>
+
+            <p>
+              In this video, a few Latter-day Saints share answers to these
+              questions. They speak from some experience, having studied the
+              lives of early pioneers and having walked, for just a few days, in
+              their footsteps.
+            </p>
+
+            <p>
+              And their answers reach beyond explaining “why.” Sitting in
+              Martin’s Cove, at the top of Rocky Ridge, and beside the willows
+              at Rock Creek Hollow, these modern-day pioneers share lessons they
+              have learned from pioneers of the past. These lessons, like the
+              pioneers themselves, can have an impact beyond the Wyoming plains.
+              They can inspire us in our efforts to follow the Savior every day.
             </p>
           </div>
         </div>
       </div>
       <div class="content">
-        <h1>Trek Quotes</h1>
+        <iframe
+          src="https://www.youtube.com/embed/G0emcGxC2Ps?si=uFkm119-X_02HVmP"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="content">
+        <h2 style="margin-bottom: 0">Trek Quotes</h2>
         <div class="slider-container">
           <div class="slider">
             <div class="slider-item">
@@ -221,28 +275,74 @@
           </div>
         </div>
       </div>
-      <div class="content">
-        <iframe
-          src="https://www.youtube.com/embed/G0emcGxC2Ps?si=uFkm119-X_02HVmP"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
       <script src="slider.js"></script>
-      <div class="content-blackout">
+      <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+      ></script>
+      <script>
+        const trekSitesMap = L.map("trek-sites-map");
+
+        L.tileLayer(
+          "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+          {
+            attribution:
+              "Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+            maxZoom: 19,
+          },
+        ).addTo(trekSitesMap);
+
+        const trekSites = [
+          {
+            name: "Martin’s Cove",
+            coordinates: [42.454, -107.239],
+            mapsUrl:
+              "https://www.google.com/maps/search/?api=1&query=Martin%27s+Cove%2C+Wyoming",
+          },
+          {
+            name: "Sixth Crossing",
+            coordinates: [42.53942, -108.17819],
+            mapsUrl:
+              "https://www.google.com/maps/search/?api=1&query=Sixth+Crossing%2C+Wyoming",
+          },
+          {
+            name: "Sweetwater River crossing at Martin’s Cove",
+            coordinates: [42.441, -107.232],
+            mapsUrl:
+              "https://www.google.com/maps/search/?api=1&query=Sweetwater+River+crossing+Martin%27s+Cove+Wyoming",
+          },
+          {
+            name: "Independence Rock",
+            coordinates: [42.49413, -107.13256],
+            mapsUrl:
+              "https://www.google.com/maps/search/?api=1&query=Independence+Rock%2C+Wyoming",
+          },
+          {
+            name: "Rock Creek Hollow",
+            coordinates: [42.44039, -108.62393],
+            mapsUrl:
+              "https://www.google.com/maps/search/?api=1&query=Rock+Creek+Hollow%2C+Wyoming",
+          },
+        ];
+
+        const siteMarkers = trekSites.map((site) =>
+          L.marker(site.coordinates)
+            .addTo(trekSitesMap)
+            .bindPopup(
+              `<a href="${site.mapsUrl}" target="_blank" rel="noopener">${site.name}</a>`,
+            ),
+        );
+
+        trekSitesMap.fitBounds(
+          L.featureGroup(siteMarkers).getBounds().pad(0.2),
+        );
+      </script>
+
+      <div class="spacer40px"></div>
+      <footer class="content-blackout">
         <p>Copyright © 2026 Enoch West Trek. All Rights Reserved.</p>
-      </div>
+      </footer>
     </div>
   </body>
 </html>

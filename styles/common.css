@@ -233,9 +233,6 @@ h3 {
   padding: 50px;
   display: block;
   cursor: pointer;
-  border-bottom: solid #828282;
-  border-radius: 10px;
-  /* animation: slider-animation 5s linear infinite; */
 }
 
 .spacer40px {
