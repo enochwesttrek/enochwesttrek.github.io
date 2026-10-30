@@ -8,7 +8,18 @@
         :host { display: block; width: 100%; color: white; font-family: "Viga", "Helvetica Neue", Arial, sans-serif; }
         .nav-links { display: flex; align-items: center; justify-content: center; }
         .nav-links a, .drop-menu { color: white; text-decoration: none; margin: 20px; font-size: 16px; text-shadow: 2px 2px 2px #111; }
-        .logo { width: 200px; filter: drop-shadow(4px 2px 2px #111); }
+        .nav-links a:hover {
+          color: #9aa55d;
+        }
+        .drop-menu a + a {
+          margin-top: 0;
+        }
+        .logo {
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
+          filter: drop-shadow(4px 2px 2px #111);
+        }
         .halve-container { display: flex; justify-content: end; width: 35vw; gap: 20px; border-bottom: solid; }
         .halve-container-right-side { justify-content: start; }
         .drop-menu { cursor: pointer; position: relative; }
@@ -42,7 +53,7 @@
             <a href="itinerary.html">Import Dates</a>
             <a href="packing.html">Packing List</a>
           </div>
-          <a class="logo-link" href="index.html"><img class="logo" src="images/logo.avif" alt="Enoch West Trek" /></a>
+          <a class="logo-link" href="index.html"><img class="logo" src="images/logo.avif" width="200" height="200" alt="Enoch West Trek" /></a>
           <div class="halve-container halve-container-right-side">
             <div class="drop-menu">
               <span>General Information</span>

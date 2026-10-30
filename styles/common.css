@@ -10,6 +10,11 @@
   opacity: 0;
 }
 
+body:has(:not(:defined)) {
+  opacity: 0;
+  visibility: hidden;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -17,6 +22,7 @@ body {
 }
 
 a {
+  color: #6f7a35;
   transition: 0.25s;
 
   &:hover {
@@ -30,6 +36,11 @@ site-nav {
 
 h3 {
   margin: 0px;
+}
+
+.right-side-content {
+  max-width: 75ch;
+  margin: 0 auto;
 }
 
 .large-button {
@@ -47,6 +58,32 @@ h3 {
   }
 }
 
+.clothing-resource-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto;
+}
+
+.clothing-resource-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 4px;
+  background-color: #9aa55d;
+  color: #fff;
+  text-decoration: none;
+}
+
+.clothing-resource-buttons a:hover,
+.clothing-resource-buttons a:focus-visible {
+  background-color: #828282;
+  color: #fff;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
@@ -55,7 +92,6 @@ h3 {
 
   li {
     padding: 5px;
-    font-size: 1.4rem;
   }
 
   .content {
@@ -65,7 +101,7 @@ h3 {
     h1,
     h2 {
       color: #6ec1e4;
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
   }
 
