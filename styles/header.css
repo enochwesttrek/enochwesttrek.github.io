@@ -68,8 +68,8 @@ header {
 
 @media (max-width: 1000px) {
   .page-header-image img {
-    object-fit: contain;
-    object-position: center bottom;
+    object-fit: cover;
+    object-position: center top;
   }
 
   header {
@@ -79,17 +79,16 @@ header {
     align-items: start;
     height: 350px;
     background-color: black;
-    background-position: bottom;
-    background-size: contain;
 
     h1 {
       position: absolute;
       align-self: end;
-      top: 50%;
+      top: 60%;
       left: 50%;
+      width: 100%;
       transform: translate(-50%, -50%);
       margin-top: 60px;
-      font-size: 40px;
+      font-size: 30px;
     }
   }
 
