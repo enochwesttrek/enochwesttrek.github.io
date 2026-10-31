@@ -98,7 +98,6 @@ header {
     display: block;
     position: absolute;
     background-image: url(../images/logo.avif);
-    filter: invert();
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
