@@ -85,6 +85,10 @@ h3 {
 }
 
 .content-container {
+  position: relative;
+  z-index: 1;
+  margin-top: 500px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,4 +316,11 @@ details {
 details[open] summary::before {
   content: "-";
   color: rgb(245, 59, 59);
+}
+
+
+@media (max-width: 1000px) {
+  .content-container {
+    margin-top: 0;
+  }
 }

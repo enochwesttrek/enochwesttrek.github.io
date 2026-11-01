@@ -24,9 +24,27 @@ header {
 }
 
 .page-header {
-  position: relative;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 0;
   overflow: hidden;
   background-image: none;
+}
+
+@keyframes header-scroll-away {
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .page-header {
+      animation: header-scroll-away linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 500px;
+    }
+  }
 }
 
 .page-header-image {
@@ -67,6 +85,13 @@ header {
 }
 
 @media (max-width: 1000px) {
+  .page-header {
+    position: relative;
+    inset: auto;
+    z-index: auto;
+    animation: none;
+  }
+
   .page-header-image img {
     object-fit: cover;
     object-position: center top;
