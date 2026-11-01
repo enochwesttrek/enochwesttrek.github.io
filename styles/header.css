@@ -89,6 +89,7 @@ header {
     position: relative;
     inset: auto;
     z-index: auto;
+    overflow: visible;
     animation: none;
   }
 

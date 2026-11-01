@@ -29,8 +29,13 @@
         .phone-menu-icon, .phone-menu-item, .phone-logo-link { display: none; }
         @media (max-width: 1000px) {
            nav { display: flex; justify-content: space-between; }
-          .nav-links { display: none; position: fixed; z-index: 1000; inset: 0 0 0 auto; width: 80%; height: 100vh; box-sizing: border-box; overflow-y: auto; padding: 40px; flex-direction: column; align-items: flex-start; justify-content: flex-start; background: #0a0a0a; }
-          .nav-links.active { display: flex; }
+          .nav-links { display: flex; position: fixed; z-index: 1000; inset: 0 0 0 auto; width: 80%; height: 100vh; box-sizing: border-box; overflow-y: auto; padding: 40px; flex-direction: column; align-items: flex-start; justify-content: flex-start; background: #0a0a0a; transform: translateX(100%); visibility: hidden; pointer-events: none; transition: none; }
+          .nav-links.active { transform: translateX(0); visibility: visible; pointer-events: auto; transition: transform 0.3s ease, visibility 0s; }
+          .nav-scrim { display: block; position: fixed; z-index: 999; inset: 0; width: 100%; height: 100vh; border: 0; padding: 0; background: rgb(0 0 0 / 55%); opacity: 0; visibility: hidden; pointer-events: none; transition: none; }
+          .nav-links.active + .nav-scrim { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.3s ease, visibility 0s; }
+          @media (prefers-reduced-motion: reduce) {
+            .nav-links, .nav-scrim { transition: none; }
+          }
           .nav-links a, .drop-menu { margin: 15px 0; padding: 8px 0; font-size: 12px; }
           .halve-container { width: auto; flex-direction: column; border: 0; }
           .nav-links .logo-link { display: none; }
@@ -72,6 +77,7 @@
             <a href="faq.html">FAQ</a>
           </div>
         </div>
+        <button class="nav-scrim" type="button" aria-label="Close navigation menu"></button>
         <a class="phone-logo-link" href="index.html"><img class="logo" src="images/logo.avif" width="25" height="50" alt="Enoch West Trek" /></a>
         <button class="phone-menu-icon" type="button" aria-label="Open menu">☰</button>
       </nav>
