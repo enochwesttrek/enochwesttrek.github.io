@@ -7,6 +7,7 @@
       <style>
         :host { display: block; width: 100%; color: white; font-family: "Viga", "Helvetica Neue", Arial, sans-serif; }
         .nav-links { display: flex; align-items: center; justify-content: center; }
+        .nav-scrim { display: none; }
         .nav-links a, .drop-menu { color: white; text-decoration: none; margin: 20px; font-size: 16px; text-shadow: 2px 2px 2px #111; }
         .nav-links a:hover {
           color: #9aa55d;
