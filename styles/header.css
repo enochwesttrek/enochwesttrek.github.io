@@ -77,7 +77,7 @@ header {
     flex-direction: row;
     justify-content: end;
     align-items: start;
-    height: 350px;
+    height: 225px;
     background-color: black;
 
     h1 {
@@ -87,23 +87,9 @@ header {
       left: 50%;
       width: 100%;
       transform: translate(-50%, -50%);
-      margin-top: 60px;
+      margin-top: 20px;
       font-size: 30px;
     }
-  }
-
-  header::before {
-    content: "";
-    display: block;
-    position: absolute;
-    background-image: url(../images/logo.avif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 100vw;
-    height: 200px;
-    margin-top: 20px;
-    z-index: 1;
   }
 
   site-nav {

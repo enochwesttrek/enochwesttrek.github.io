@@ -26,9 +26,9 @@
         .dropped-menu { display: none; position: absolute; left: -27px; flex-direction: column; width: 210px; background: white; z-index: 2; }
         .dropped-menu a { color: black; text-shadow: none; }
         .drop-menu:hover .dropped-menu, .drop-menu:focus-within .dropped-menu { display: flex; }
-        .phone-menu-icon, .phone-menu-item { display: none; }
+        .phone-menu-icon, .phone-menu-item, .phone-logo-link { display: none; }
         @media (max-width: 1000px) {
-          :host { width: auto; }
+           nav { display: flex; justify-content: space-between; }
           .nav-links { display: none; position: fixed; z-index: 1000; inset: 0 0 0 auto; width: 80%; height: 100vh; box-sizing: border-box; overflow-y: auto; padding: 40px; flex-direction: column; align-items: flex-start; justify-content: flex-start; background: #0a0a0a; }
           .nav-links.active { display: flex; }
           .nav-links a, .drop-menu { margin: 15px 0; padding: 8px 0; font-size: 12px; }
@@ -37,7 +37,9 @@
           .drop-menu { position: static; }
           .dropped-menu { position: static; background: #000; }
           .dropped-menu a { color: white; }
-          .phone-menu-icon { display: block; margin: 30px; padding: 0; border: 0; background: transparent; color: white; font: inherit; font-size: 28px; cursor: pointer; }
+          .phone-logo-link { display: block; width: 65px; height: 70px; margin: 20px; z-index: 1; }
+          .phone-logo-link .logo { height: 100%; width: 100%; }
+          .phone-menu-icon { display: block; margin: 20px; padding: 0; border: 0; background: transparent; color: white; font: inherit; font-size: 28px; cursor: pointer; }
           .phone-menu-item { display: none; width: 100%; }
           .phone-menu-item.visible { display: flex; justify-content: flex-end; }
           .phone-menu-exit-icon { border: 0; background: transparent; color: white; font-size: 28px; cursor: pointer; }
@@ -70,6 +72,7 @@
             <a href="faq.html">FAQ</a>
           </div>
         </div>
+        <a class="phone-logo-link" href="index.html"><img class="logo" src="images/logo.avif" width="25" height="50" alt="Enoch West Trek" /></a>
         <button class="phone-menu-icon" type="button" aria-label="Open menu">☰</button>
       </nav>
     `;
