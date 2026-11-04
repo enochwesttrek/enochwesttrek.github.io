@@ -41,7 +41,7 @@
           .halve-container { width: auto; flex-direction: column; border: 0; }
           .nav-links .logo-link { display: none; }
           .drop-menu { position: static; }
-          .dropped-menu { position: static; background: #000; }
+          .dropped-menu { position: static; background: #82828223; border-radius: 5px; padding: 10px; margin-top:10px;}
           .dropped-menu a { color: white; }
           .phone-logo-link { display: block; width: 65px; height: 70px; margin: 20px; z-index: 1; }
           .phone-logo-link .logo { height: 100%; width: 100%; }
@@ -64,7 +64,7 @@
           <a class="logo-link" href="index.html"><img class="logo" src="images/logo.avif" width="200" height="200" alt="Enoch West Trek" /></a>
           <div class="halve-container halve-container-right-side">
             <div class="drop-menu">
-              <span>General Information</span>
+              <span>General Information &#9207;</span>
               <div class="dropped-menu">
                 <a href="preparation.html">Physical & Spiritual Preparation</a>
                 <a href="participation-form.html">Participation Form</a>

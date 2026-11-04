@@ -48,7 +48,7 @@ h3 {
   padding: 20px;
   display: flex;
   justify-content: center;
-  width: 600px;
+  width: 50vw;
   border-radius: 4px;
   text-decoration: none;
   color: #ffffff;
@@ -238,6 +238,9 @@ h3 {
       width: 80vw;
       height: 550px;
       padding: 10px;
+    }
+    .large-button {
+      width: 80vw;
     }
   }
 }
