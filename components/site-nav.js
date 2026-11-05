@@ -24,6 +24,10 @@
         .halve-container { display: flex; justify-content: end; width: 35vw; gap: 20px; border-bottom: solid; }
         .halve-container-right-side { justify-content: start; }
         .drop-menu { cursor: pointer; position: relative; }
+        .drop-menu > span { display: inline-flex; align-items: center; gap: 0.35em; }
+        .drop-menu .fa-caret-down { display: inline-block; width: 0.625em; height: 1em; vertical-align: -0.125em; }
+        .drop-menu .fa-caret-down { transition: transform 0.2s ease; }
+        .drop-menu:hover .fa-caret-down, .drop-menu:focus-within .fa-caret-down { transform: rotate(180deg); }
         .dropped-menu { display: none; position: absolute; left: -27px; flex-direction: column; width: 210px; background: white; z-index: 2; }
         .dropped-menu a { color: black; text-shadow: none; }
         .drop-menu:hover .dropped-menu, .drop-menu:focus-within .dropped-menu { display: flex; }
@@ -64,7 +68,7 @@
           <a class="logo-link" href="index.html"><img class="logo" src="images/logo.avif" width="200" height="200" alt="Enoch West Trek" /></a>
           <div class="halve-container halve-container-right-side">
             <div class="drop-menu">
-              <span>General Information &#9207;</span>
+              <span>General Information <svg class="fa-caret-down" aria-hidden="true" focusable="false" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/></svg></span>
               <div class="dropped-menu">
                 <a href="preparation.html">Physical & Spiritual Preparation</a>
                 <a href="participation-form.html">Participation Form</a>
